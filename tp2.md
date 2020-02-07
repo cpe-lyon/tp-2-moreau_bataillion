@@ -80,22 +80,8 @@ On lance le script en appelant *testpwd.sh*
 
 **Ecrivez un script qui prend un paramètre et utilise la fonction suivante pour vérifier que ce paramètreest un nombre réel :**  
 
-#!/bin/bash  
-function is_number(){  
-	re='^[+-]?[0-9]+([.][0-9]+)?$'  
-	if ! [[ $1 =~ $re ]] ; then  
-		return 1  
-	else  
-		return 0  
-	fi  
-}  
+![alt tag](https://user-images.githubusercontent.com/60732108/74059985-532eb900-49e9-11ea-9558-1781ac8d5e39.png)
 
-is_number $1  
-if [ $? -eq 1 ];then   
-	echo "erreur : pas réel"  
-else  
-	echo "réel"  
-fi  
 
 On crée la fonction et on l'appelle avec en paramètre le premier paramètre saisi par l'utilisateur ($1).  
 $? : contient la dernière valeur retournée par une fonction  
