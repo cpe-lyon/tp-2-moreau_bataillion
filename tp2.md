@@ -129,55 +129,7 @@ cut -d: -f1 /etc/passwd | grep -x lib
 
 **3.Modifiez votre programme pour que les notes ne soient plus données en paramètres, mais saisies etstockées au fur et à mesure dans un tableau.**  
 
-#!/bin/bash
-function is_number(){
-	re='^[+-]?[0-9]+([.][0-9]+)?$'
-	if ! [[ $1 =~ $re ]] ; then
-		return 1
-	else
-		return 0
-	fi
-}
-
-read -p 'Combien de valeurs voulez vous ?' taille
-tableau=()
-compt=0
-while [ $compt -ne $taille ]
-do
-	read -p 'Donnez moi un nombre: ' tableau[$(($compt))]
-	compt=$(($compt+1))
-done
-
-erreur=0
-for param in ${tableau[*]}; do
-	is_number $param
-	if [ $? -eq 1 ]; then
-		erreur=$(($erreur+1))
-	fi
-done
-
-if [ $erreur -eq 0 ]; then
-	moy=0
-	max=${tableau[1]}
-	min=${tableau[1]}
-	for param in ${tableau[*]}; do 
-		if [ $max -lt $param ]; then
-			max=$param	
-		fi
-		if [ $min -gt $param ];then
-			min=$param
-		fi
-		moy=$(($moy+$param))
-	done
-	moy=$(($moy/$taille))
-	echo 'moyenne : ' $moy
-	echo 'minimum : ' $min
-	echo 'maximum : ' $max
-else
-	echo "Au moins un des parametres n'etait pas un nombre"
-fi
-
-
+![alt tag](https://user-images.githubusercontent.com/60732108/74060382-2202b880-49ea-11ea-85ef-0f3ed2c7cc48.png)  
 
 
 
