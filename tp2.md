@@ -90,8 +90,10 @@ $? : contient la dernière valeur retournée par une fonction
 
 **Écrivez un script qui vérifie l’existence d’un utilisateur dont le nom est donné en paramètre du script. Si le script est appelé sans nom d’utilisateur, il affiche le message : ”Utilisation :nom_du_script nom_utilisateur”,où nom_du_script est le nom de votre script récupéré automatiquement (si vous changez le nom de votre script, le message doit changer automatiquement)**  
 
-**Script:** 
-![alt tag](https://user-images.githubusercontent.com/60732108/74059759-eadfd780-49e8-11ea-80f0-3097916e6f33.png)  
+**Script:**  
+
+![alt tag](https://user-images.githubusercontent.com/60732108/74059759-eadfd780-49e8-11ea-80f0-3097916e6f33.png)    
+
 
 cut -d: -f1 /etc/passwd | grep -x lib  
 *-d:* : indique le symbole qui délimite les colonnes (ici :)  
@@ -114,18 +116,7 @@ cut -d: -f1 /etc/passwd | grep -x lib
 
 **Écrivez un script qui génère un nombre aléatoire entre 1 et 1000 et demande à l’utilisateur de le deviner. Le programme écrira ”C’est plus!”, ”C’est moins!” ou ”Gagné!” selon les cas (vous utiliserez $RANDOM).**  
 
-#!/bin/bash
-Nb_rand=$(( $RANDOM % 1000 + 1))
-read -p 'Quel est le juste prix ?' Nb_util
-while [ $Nb_util -ne $Nb_rand ]
-do
-	if [ $Nb_util -lt $Nb_rand ]; then
-		read -p 'C est plus ! Essaye encore !' Nb_util 
-	else 
-		read -p 'C est moins ! Essaye encore !' Nb_util
-	fi
-done
-echo 'Bravo ! Gagné !'
+![alt tag](https://user-images.githubusercontent.com/60732108/74060235-d6500f00-49e9-11ea-8c95-87bbb3f60610.png)
 
 
 ## Exercice 7. Statistiques  
