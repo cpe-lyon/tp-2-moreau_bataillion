@@ -69,51 +69,51 @@ else
 	echo "Le mot de passe ne correspond pas"  
 fi  
 
-Dans PASSWORD, on stocke le mot de passe témoin. On demande à l'utilisateur de remplir un mot de passe grâce à la commande *read*. On ajoute en option de read *-p* pour afficher un message (ici: *Saisissez votre mot de passe :*) et *-s* pour que le mot de passe saisi par l'utilisateur ne s'affiche pas.
-Dans le cas où la chaine rentrée par l'utilisateur correspond à la chaine rentrée dans PASSWORD : le mot de passe corespond. On utilise *$* devant les variables pour avoir accès à leur contenu.
+Dans PASSWORD, on stocke le mot de passe témoin. On demande à l'utilisateur de remplir un mot de passe grâce à la commande *read*. On ajoute en option de read *-p* pour afficher un message (ici: *Saisissez votre mot de passe :*) et *-s* pour que le mot de passe saisi par l'utilisateur ne s'affiche pas.  
+Dans le cas où la chaine rentrée par l'utilisateur correspond à la chaine rentrée dans PASSWORD : le mot de passe corespond. On utilise *$* devant les variables pour avoir accès à leur contenu.  
 
-On compile avec *chmod u+x testpwd.sh*
-On lance le script en appelant *testpwd.sh*
+On compile avec *chmod u+x testpwd.sh*  
+On lance le script en appelant *testpwd.sh*  
 
 
-## Exercice 3. Expressions rationnelles
+## Exercice 3. Expressions rationnelles  
 
-**Ecrivez un script qui prend un paramètre et utilise la fonction suivante pour vérifier que ce paramètreest un nombre réel :**
+**Ecrivez un script qui prend un paramètre et utilise la fonction suivante pour vérifier que ce paramètreest un nombre réel :**  
 
-#!/bin/bash
-function is_number(){
-	re='^[+-]?[0-9]+([.][0-9]+)?$'
-	if ! [[ $1 =~ $re ]] ; then
-		return 1
-	else
-		return 0
-	fi
-}
+#!/bin/bash  
+function is_number(){  
+	re='^[+-]?[0-9]+([.][0-9]+)?$'  
+	if ! [[ $1 =~ $re ]] ; then  
+		return 1  
+	else  
+		return 0  
+	fi  
+}  
 
-is_number $1
-if [ $? -eq 1 ];then
-	echo "erreur : pas réel"
-else
-	echo "réel"
-fi
+is_number $1  
+if [ $? -eq 1 ];then   
+	echo "erreur : pas réel"  
+else  
+	echo "réel"  
+fi  
 
-On crée la fonction et on l'appelle avec en paramètre le premier paramètre saisi par l'utilisateur ($1).
-$? : contient la dernière valeur retournée par une fonction
+On crée la fonction et on l'appelle avec en paramètre le premier paramètre saisi par l'utilisateur ($1).  
+$? : contient la dernière valeur retournée par une fonction  
 
-## Exercice 4. Contrôle d’utilisateur
+## Exercice 4. Contrôle d’utilisateur  
 
-**Écrivez un script qui vérifie l’existence d’un utilisateur dont le nom est donné en paramètre du script. Si le script est appelé sans nom d’utilisateur, il affiche le message : ”Utilisation :nom_du_script nom_utilisateur”,où nom_du_script est le nom de votre script récupéré automatiquement (si vous changez le nom de votre script, le message doit changer automatiquement)**
+**Écrivez un script qui vérifie l’existence d’un utilisateur dont le nom est donné en paramètre du script. Si le script est appelé sans nom d’utilisateur, il affiche le message : ”Utilisation :nom_du_script nom_utilisateur”,où nom_du_script est le nom de votre script récupéré automatiquement (si vous changez le nom de votre script, le message doit changer automatiquement)**  
 
-cut -d: -f1 /etc/passwd | grep -x lib
-*-d:* : indique le symbole qui délimite les colonnes (ici :)
-*-f1* : indique la colonne que l'on sélectionne
-*|* : passe la sélection à la commande suivant le pipe
-*grep* : trouve les occurences du terme passé en paramètre (ici lib).
-*-x* : fais en sorte que les occurences correspondent exactement au terme passé en paramètre.
+cut -d: -f1 /etc/passwd | grep -x lib  
+*-d:* : indique le symbole qui délimite les colonnes (ici :)  
+*-f1* : indique la colonne que l'on sélectionne  
+*|* : passe la sélection à la commande suivant le pipe  
+*grep* : trouve les occurences du terme passé en paramètre (ici lib).  
+*-x* : fais en sorte que les occurences correspondent exactement au terme passé en paramètre.  
 
-*-z* : vérifie que la chaine est vide
+*-z* : vérifie que la chaine est vide  
 
-**Script:**
+**Script:**  
 #!/bin/bash
 if [  $# -eq 0 ] ; then
 	echo $0 "nom_utilisateur"
@@ -126,9 +126,9 @@ else
 fi
 
 
-## Exercice 5. Factorielle
+## Exercice 5. Factorielle  
 
-**Écrivez un programme qui calcule la factorielle d’un entier naturel passé en paramètre (on supposera que l’utilisateur saisit toujours un entier naturel).**
+**Écrivez un programme qui calcule la factorielle d’un entier naturel passé en paramètre (on supposera que l’utilisateur saisit toujours un entier naturel).**  
 
 #!/bin/bash
 val=1
@@ -139,9 +139,9 @@ done
 echo $val
 
 
-**Exercice 6. Le juste prix**
+**Exercice 6. Le juste prix**  
 
-**Écrivez un script qui génère un nombre aléatoire entre 1 et 1000 et demande à l’utilisateur de le deviner. Le programme écrira ”C’est plus!”, ”C’est moins!” ou ”Gagné!” selon les cas (vous utiliserez $RANDOM).**
+**Écrivez un script qui génère un nombre aléatoire entre 1 et 1000 et demande à l’utilisateur de le deviner. Le programme écrira ”C’est plus!”, ”C’est moins!” ou ”Gagné!” selon les cas (vous utiliserez $RANDOM).**  
 
 #!/bin/bash
 Nb_rand=$(( $RANDOM % 1000 + 1))
@@ -157,10 +157,10 @@ done
 echo 'Bravo ! Gagné !'
 
 
-## Exercice 7. Statistiques
+## Exercice 7. Statistiques  
 
 **1.Écrivez un script qui prend en paramètres trois entiers (entre -100 et +100) et aﬀiche le min, le maxet la moyenne. Vous pouvez réutiliser la fonction de l’exercice 3 pour vous assurer que les paramètressont bien des entiers.
-2.Généralisez le programme à un nombre quelconque de paramètres (pensez àSHIFT)**
+2.Généralisez le programme à un nombre quelconque de paramètres (pensez àSHIFT)**  
 
 #!/bin/bash
 function is_number(){
@@ -203,7 +203,7 @@ fi
 
 
 
-**3.Modifiez votre programme pour que les notes ne soient plus données en paramètres, mais saisies etstockées au fur et à mesure dans un tableau.**
+**3.Modifiez votre programme pour que les notes ne soient plus données en paramètres, mais saisies etstockées au fur et à mesure dans un tableau.**  
 
 #!/bin/bash
 function is_number(){
