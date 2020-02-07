@@ -59,15 +59,7 @@ PATH=$PATH:~/script
 
 **Écrivez un script testpwd.sh qui demande de saisir un mot de passe et vérifie s’il correspond ou non au contenu d’une variable PASSWORD dont le contenu est codé en dur dans le script. Le mot de passe saisi par l’utilisateur ne doit pas s’afficher.**  
 
-On crée un fichier testpwd.sh que l'on remplie avec le code utile:  
-#!/bin/bash  
-PASSWORD="tp"  
-read -s -p 'Saisissez votre mot de passe : ' mdp  
-if [ "$mdp" = "$PASSWORD" ]; then  
-	echo "Le mot de passe correspond"  
-else  
-	echo "Le mot de passe ne correspond pas"  
-fi  
+![alt tag](https://user-images.githubusercontent.com/60732108/74060385-229b4f00-49ea-11ea-83ea-d91e4ceac393.png)
 
 Dans PASSWORD, on stocke le mot de passe témoin. On demande à l'utilisateur de remplir un mot de passe grâce à la commande *read*. On ajoute en option de read *-p* pour afficher un message (ici: *Saisissez votre mot de passe :*) et *-s* pour que le mot de passe saisi par l'utilisateur ne s'affiche pas.  
 Dans le cas où la chaine rentrée par l'utilisateur correspond à la chaine rentrée dans PASSWORD : le mot de passe corespond. On utilise *$* devant les variables pour avoir accès à leur contenu.  
