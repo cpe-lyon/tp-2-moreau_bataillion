@@ -124,45 +124,7 @@ cut -d: -f1 /etc/passwd | grep -x lib
 **1.Écrivez un script qui prend en paramètres trois entiers (entre -100 et +100) et aﬀiche le min, le maxet la moyenne. Vous pouvez réutiliser la fonction de l’exercice 3 pour vous assurer que les paramètressont bien des entiers.
 2.Généralisez le programme à un nombre quelconque de paramètres (pensez àSHIFT)**  
 
-#!/bin/bash
-function is_number(){
-	re='^[+-]?[0-9]+([.][0-9]+)?$'
-	if ! [[ $1 =~ $re ]] ; then
-		return 1
-	else
-		return 0
-	fi
-}
-
-erreur=0
-for param in $*; do
-	is_number $param
-	if [ $? -eq 1 ]; then
-		erreur=$(($erreur+1))
-	fi
-done
-
-if [ $erreur -eq 0 ]; then
-	moy=0
-	max=$1
-	min=$1
-	for param in $*; do 
-		if [ $max -lt $param ]; then
-			max=$param	
-		fi
-		if [ $min -gt $param ];then
-			min=$param
-		fi
-		moy=$(($moy+$param))
-	done
-	moy=$(($moy/$#))
-	echo 'moyenne : ' $moy
-	echo 'minimum : ' $min
-	echo 'maximum : ' $max
-else
-	echo "Au moins un des parametres n'etait pas un nombre"
-fi
-
+![alt tag](https://user-images.githubusercontent.com/60732108/74060241-d819d280-49e9-11ea-86f9-c0af5b0edda5.png)  
 
 
 **3.Modifiez votre programme pour que les notes ne soient plus données en paramètres, mais saisies etstockées au fur et à mesure dans un tableau.**  
