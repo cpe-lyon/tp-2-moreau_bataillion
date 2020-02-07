@@ -78,7 +78,7 @@ On lance le script en appelant *testpwd.sh*
 
 ## Exercice 3. Expressions rationnelles  
 
-**Ecrivez un script qui prend un paramètre et utilise la fonction suivante pour vérifier que ce paramètreest un nombre réel :**  
+**Ecrivez un script qui prend un paramètre et utilise la fonction suivante pour vérifier que ce paramètre est un nombre réel :**  
 
 ![alt tag](https://user-images.githubusercontent.com/60732108/74059985-532eb900-49e9-11ea-9558-1781ac8d5e39.png)
 
@@ -91,7 +91,7 @@ $? : contient la dernière valeur retournée par une fonction
 **Écrivez un script qui vérifie l’existence d’un utilisateur dont le nom est donné en paramètre du script. Si le script est appelé sans nom d’utilisateur, il affiche le message : ”Utilisation :nom_du_script nom_utilisateur”,où nom_du_script est le nom de votre script récupéré automatiquement (si vous changez le nom de votre script, le message doit changer automatiquement)**  
 
 **Script:** 
-![alt tag](https://user-images.githubusercontent.com/60732108/74059759-eadfd780-49e8-11ea-80f0-3097916e6f33.png)
+![alt tag](https://user-images.githubusercontent.com/60732108/74059759-eadfd780-49e8-11ea-80f0-3097916e6f33.png)  
 
 cut -d: -f1 /etc/passwd | grep -x lib  
 *-d:* : indique le symbole qui délimite les colonnes (ici :)  
@@ -107,13 +107,7 @@ cut -d: -f1 /etc/passwd | grep -x lib
 
 **Écrivez un programme qui calcule la factorielle d’un entier naturel passé en paramètre (on supposera que l’utilisateur saisit toujours un entier naturel).**  
 
-#!/bin/bash
-val=1
-for i in $(seq 1 $1)
-do
-	val=$(( $val * $i ))
-done
-echo $val
+![alt tag](https://user-images.githubusercontent.com/60732108/74060003-59bd3080-49e9-11ea-80b8-15621beba262.png)  
 
 
 **Exercice 6. Le juste prix**  
