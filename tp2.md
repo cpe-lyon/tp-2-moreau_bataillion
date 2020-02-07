@@ -104,6 +104,8 @@ $? : contient la dernière valeur retournée par une fonction
 
 **Écrivez un script qui vérifie l’existence d’un utilisateur dont le nom est donné en paramètre du script. Si le script est appelé sans nom d’utilisateur, il affiche le message : ”Utilisation :nom_du_script nom_utilisateur”,où nom_du_script est le nom de votre script récupéré automatiquement (si vous changez le nom de votre script, le message doit changer automatiquement)**  
 
+![alt tag](https://user-images.githubusercontent.com/60732108/74059759-eadfd780-49e8-11ea-80f0-3097916e6f33.png)
+
 cut -d: -f1 /etc/passwd | grep -x lib  
 *-d:* : indique le symbole qui délimite les colonnes (ici :)  
 *-f1* : indique la colonne que l'on sélectionne  
