@@ -8,7 +8,36 @@ Les commandes tapées par un utilisateur se trouvent dans un des dossiers suivan
 **2.Quelle variable d’environnement permet à la commande cd tapée sans argument de vous ramener dans votre répertoire personnel?**
 Grâce à la commande *$env* on a accès à la liste des variables d'environnement. On remarque la variable HOME contient le chemin du répertoire personnel.
 
-**3.Explicitez le rôle des variables LANG,PWD,OLDPWD, SHELLet_.**
+**3.Explicitez le rôle des variables LANG, PWD, OLDPWD, SHELL et_.**
+LANG : indique la langue qui est utilisée par les logiciels et les utilisateurs
+PWD : indique l'emplacement du dossier courant
+OLDPWD : indique l'emplacement du dossier courant précédent
+SHELL : renvoie l'interpréteur shell utilisé : pour nous il s'agit de bash (avec *echo $SHELL* on obtient :*/bin/bash*)
+_ : renvoie le dernier argument passé
+
+**4.Créez une variable locale MY_VAR(le contenu n’a pas d’importance). Vérifiez que la variable existe.**
+*MY_VAR="bla"*
+Pour afficher le contenu de la variable locale : *echo $MY_VAR*
+Note : *printenv MY_VAR* ne peut pas fonctionner car MY_VAR est une variable locale, et pas une variable d'environnement.
+
+**5.Tapez ensuite la commande bash. Que fait-elle? La variable MY_VAR existe-t-elle? Expliquez. A la fin de cette question, tapez la commande exit pour revenir dans votre session initiale.**
+La commande *bash* crée un nouveau shell. Dans ce shell, MY_VAR n'existe plus : elle n'a pas été créée à ce niveau et c'est une variable locale. *exit* nous permet de rejoindre le shell initial dans lequel MY_VAR est toujours présente. On peut connaître le niveau de son shell actuel grâce à  *echo $SHLVL*.
+
+**6.Transformez MY_VAR en une variable d’environnement et recommencez la question précédente. Expliquez.**
+On transforme MY_VAR en variable d'environnement grâce à *export MY_VAR*. Lorsqu'on crée un nouveau SHELL, cette variable est conservée car elle est de configuration globale : elle est présente dans tous les SHELL jusqu'à sa suppression.
+
+**7.Créer la variable d’environnement NOMS ayant pour contenu vos noms de binômes séparés par un espace. Afficher la valeur de NOMS pour vérifier que l’affectation est correcte.**
+*export NOMS=Bataillion Moreau* crée une variable d'environnement NOMS qui contient uniquement Bataillion. Il a été considéré que les 2 noms étaient des arguments différents. Il faut mettre des cotes ou des guillemets pour indiquer qu'il s'agit d'un seul argument.
+
+**8.Ecrivez une commande qui affiche ”Bonjour à vous deux, binôme1 binôme2!” (où binôme1 et binôme2 sont vos deux noms) en utilisant la variable NOMS.**
+
+
+
+
+
+
+
+
 
 
 
