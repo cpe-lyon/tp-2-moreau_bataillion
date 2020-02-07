@@ -63,6 +63,14 @@ On lance le script en appelant *testpwd.sh*
 
 
 
+Notes: Copier VM->session
+scp -P 2222 marialice@localhost:script/nom_fichier.sh ~/Documents
+
+
+
+
+
+
 
 
 
