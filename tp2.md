@@ -47,7 +47,15 @@ PATH=$PATH:~/script
 ## Exercice 2. Contrôle de mot de passe
 
 **Écrivez un script testpwd.sh qui demande de saisir un mot de passe et vérifie s’il correspond ou non au contenu d’une variable PASSWORD dont le contenu est codé en dur dans le script. Le mot de passe saisi par l’utilisateur ne doit pas s’afficher.**
-On crée un fichier testpwd.sh que l'on remplie avec le code utile.
+On crée un fichier testpwd.sh que l'on remplie avec le code utile:
+#!/bin/bash
+PASSWORD="tp"
+read -s -p 'Saisissez votre mot de passe : ' mdp
+if [ "$mdp" = "$PASSWORD" ]; then
+	echo "Le mot de passe correspond"
+else
+	echo "Le mot de passe ne correspond pas"
+fi
 
 On compile avec *chmod u+x testpwd.sh*
 On lance le script en appelant *testpwd.sh*
