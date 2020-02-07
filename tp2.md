@@ -104,6 +104,7 @@ $? : contient la dernière valeur retournée par une fonction
 
 **Écrivez un script qui vérifie l’existence d’un utilisateur dont le nom est donné en paramètre du script. Si le script est appelé sans nom d’utilisateur, il affiche le message : ”Utilisation :nom_du_script nom_utilisateur”,où nom_du_script est le nom de votre script récupéré automatiquement (si vous changez le nom de votre script, le message doit changer automatiquement)**  
 
+**Script:** 
 ![alt tag](https://user-images.githubusercontent.com/60732108/74059759-eadfd780-49e8-11ea-80f0-3097916e6f33.png)
 
 cut -d: -f1 /etc/passwd | grep -x lib  
@@ -114,18 +115,6 @@ cut -d: -f1 /etc/passwd | grep -x lib
 *-x* : fais en sorte que les occurences correspondent exactement au terme passé en paramètre.  
 
 *-z* : vérifie que la chaine est vide  
-
-**Script:**  
-#!/bin/bash
-if [  $# -eq 0 ] ; then
-	echo $0 "nom_utilisateur"
-else
-	if [ -z "$(cut -d: -f1 /etc/passwd | grep -x $1 )" ] ; then
-		echo "L'utilisateur n'existe pas"
-	else
-		echo  "L'utilisateur existe"
-	fi
-fi
 
 
 ## Exercice 5. Factorielle  
