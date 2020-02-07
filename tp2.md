@@ -57,6 +57,9 @@ else
 	echo "Le mot de passe ne correspond pas"
 fi
 
+Dans PASSWORD, on stocke le mot de passe témoin. On demande à l'utilisateur de remplir un mot de passe grâce à la commande *read*. On ajoute en option de read *-p* pour afficher un message (ici: *Saisissez votre mot de passe :*) et *-s* pour que le mot de passe saisi par l'utilisateur ne s'affiche pas.
+Dans le cas où la chaine rentrée par l'utilisateur correspond à la chaine rentrée dans PASSWORD : le mot de passe corespond. On utilise *$* devant les variables pour avoir accès à leur contenu.
+
 On compile avec *chmod u+x testpwd.sh*
 On lance le script en appelant *testpwd.sh*
 
@@ -64,8 +67,6 @@ On lance le script en appelant *testpwd.sh*
 ## Exercice 3. Expressions rationnelles
 
 **Ecrivez un script qui prend un paramètre et utilise la fonction suivante pour vérifier que ce paramètreest un nombre réel :**
-
-$? : contient la dernière valeur retournée par une fonction
 
 #!/bin/bash
 function is_number(){
@@ -84,7 +85,8 @@ else
 	echo "réel"
 fi
 
-
+On crée la fonction et on l'appelle avec en paramètre le premier paramètre saisi par l'utilisateur ($1).
+$? : contient la dernière valeur retournée par une fonction
 
 ## Exercice 4. Contrôle d’utilisateur
 
