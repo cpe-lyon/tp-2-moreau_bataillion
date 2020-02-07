@@ -55,7 +55,8 @@ On lance le script en appelant *testpwd.sh*
 
 ## Exercice 3. Expressions rationnelles
 
-Ecrivez un script qui prend un paramètre et utilise la fonction suivante pour vérifier que ce paramètreest un nombre réel :
+**Ecrivez un script qui prend un paramètre et utilise la fonction suivante pour vérifier que ce paramètreest un nombre réel :**
+
 
 
 
