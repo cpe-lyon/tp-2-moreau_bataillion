@@ -86,6 +86,70 @@ fi
 
 
 
+## Exercice 4. Contrôle d’utilisateur
+
+**Écrivez un script qui vérifie l’existence d’un utilisateur dont le nom est donné en paramètre du script. Si le script est appelé sans nom d’utilisateur, il affiche le message : ”Utilisation :nom_du_script nom_utilisateur”,où nom_du_script est le nom de votre script récupéré automatiquement (si vous changez le nom de votre script, le message doit changer automatiquement)**
+
+cut -d: -f1 /etc/passwd | grep -x lib
+*-d:* : indique le symbole qui délimite les colonnes (ici :)
+*-f1* : indique la colonne que l'on sélectionne
+*|* : passe la sélection à la commande suivant le pipe
+*grep* : trouve les occurences du terme passé en paramètre (ici lib).
+*-x* : fais en sorte que les occurences correspondent exactement au terme passé en paramètre.
+
+*-z* : vérifie que la chaine est vide
+
+**Script:**
+#!/bin/bash
+if [  $# -eq 0 ] ; then
+	echo $0 "nom_utilisateur"
+else
+	if [ -z "$(cut -d: -f1 /etc/passwd | grep -x $1 )" ] ; then
+		echo "L'utilisateur n'existe pas"
+	else
+		echo  "L'utilisateur existe"
+	fi
+fi
+
+
+## Exercice 5. Factorielle
+
+**Écrivez un programme qui calcule la factorielle d’un entier naturel passé en paramètre (on supposera que l’utilisateur saisit toujours un entier naturel).**
+
+#!/bin/bash
+val=1
+for i in $(seq 1 $1)
+do
+	val=$(( $val * $i ))
+done
+echo $val
+
+
+**Exercice 6. Le juste prix**
+
+**Écrivez un script qui génère un nombre aléatoire entre 1 et 1000 et demande à l’utilisateur de le deviner. Le programme écrira ”C’est plus!”, ”C’est moins!” ou ”Gagné!” selon les cas (vous utiliserez $RANDOM).**
+
+#!/bin/bash
+Nb_rand=$(( $RANDOM % 1000 + 1))
+read -p 'Quel est le juste prix ?' Nb_util
+while [ $Nb_util -ne $Nb_rand ]
+do
+	if [ $Nb_util -lt $Nb_rand ]; then
+		read -p 'C est plus ! Essaye encore !' Nb_util 
+	else 
+		read -p 'C est moins ! Essaye encore !' Nb_util
+	fi
+done
+echo 'Bravo ! Gagné !'
+
+
+## Exercice 7. Statistiques
+
+
+
+
+
+
 
 
 Notes: Copier VM->session
