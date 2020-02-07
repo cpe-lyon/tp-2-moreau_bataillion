@@ -10,8 +10,9 @@ Les commandes tapées par un utilisateur se trouvent dans un des dossiers suivan
 
 Grâce à la commande *$env* on a accès à la liste des variables d'environnement. On remarque la variable HOME contient le chemin du répertoire personnel.
 
-**3.Explicitez le rôle des variables LANG, PWD, OLDPWD, SHELL et_.**
-LANG : indique la langue qui est utilisée par les logiciels et les utilisateurs
+**3.Explicitez le rôle des variables LANG, PWD, OLDPWD, SHELL et_.**  
+
+LANG : indique la langue qui est utilisée par les logiciels et les utilisateurs  
 PWD : indique l'emplacement du dossier courant
 OLDPWD : indique l'emplacement du dossier courant précédent
 SHELL : renvoie l'interpréteur shell utilisé : pour nous il s'agit de bash (avec *echo $SHELL* on obtient :*/bin/bash*)
