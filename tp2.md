@@ -144,7 +144,7 @@ On génère un nombre random grâce à `$RANDOM`, et on en indique les valeurs m
 
 ![alt tag](https://user-images.githubusercontent.com/60732108/74060241-d819d280-49e9-11ea-86f9-c0af5b0edda5.png)  
 
-Lors de l'appel de la fonction, l'utilisateur rentre en paramètres tous les nombres qu'il souhaite voir comparés et moyennés. A l'aide d'une boucle for sur `$*` (la variable qui contient tous les paramètres) et de l'appel de la fonction `is_number`, le programme vérifie que l'utilisateur a bien rentré des nombres réels. Lorsqu'un des parametres n'est pas un nombre réel, on incrémente une variable `erreur` (initialisée à 0). A la fin de la boucle, si la variable `erreur` n'est pas nulle cela signifie qu'au moins un des paramètres n'est pas un nombre réel, par conséquent le programme envoie un message d'erreur et s'arrete.  
+Lors de l'appel de la fonction, l'utilisateur rentre en paramètres tous les nombres qu'il souhaite voir comparés et moyennés. A l'aide d'une boucle for sur `$*` (la variable qui contient tous les paramètres rentrés par l'utilisateur) et de l'appel de la fonction `is_number`, le programme vérifie que l'utilisateur a bien rentré des nombres réels. Lorsqu'un des parametres n'est pas un nombre réel, on incrémente une variable `erreur` (initialisée à 0). A la fin de la boucle, si la variable `erreur` n'est pas nulle cela signifie qu'au moins un des paramètres n'est pas un nombre réel, par conséquent le programme envoie un message d'erreur et s'arrete.  
 Si tous les paramètres sont des nombres réels, on réalise une seconde boucle `for` sur les paramètres. Par comparaison avec chaque paramètre on trouve le minimum et le maximum qu'on stocke dans des variables. Pour calculer la moyenne, durant la boucle on additionne tous les paramètres dans une variable. A la sortie de la boucle, celle-ci est divisée par le nombre de paramètres (`$#`) pour obtenir la moyenne.
 
 Note:  
@@ -164,7 +164,7 @@ Pour faire un calcul : `$(($variable_1 signe_calcul $variable_2))`
 ![alt tag](https://user-images.githubusercontent.com/60732108/74060382-2202b880-49ea-11ea-85ef-0f3ed2c7cc48.png)  
 
 Afin d'adapter le programme précedent pour que l'utilisateur puisse rentrer les valeurs dans un tableau, nous commençons par demander à l'utilisateur le nombre de valeurs qu'il a à traiter et nous stockons ce nombre dans une variable. Ensuite, à l'aide d'une boucle while tant que cette taille n'est pas atteinte, nous remplissons le tableau. Afin de remplir la ième case du tableau nous utilisons : `tableau[$(($i))]`.  
-Pour parcourir les valeurs contenues dans le tableau avec une boucle while nous utilisons : `for param in ${tableau[*]}`.  
+Pour parcourir les valeurs contenues dans le tableau avec une boucle for, nous utilisons : `for param in ${tableau[*]}`. `param` prend toutes les valeurs contenues dans le tableau : `tableau[*]`contient toutes les valeurs du tableau .  
 Le reste du programme reste inchangé.
 
 
