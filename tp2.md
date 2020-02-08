@@ -163,7 +163,7 @@ Pour faire un calcul : `$(($variable_1 signe_calcul $variable_2))`
 
 ![alt tag](https://user-images.githubusercontent.com/60732108/74060382-2202b880-49ea-11ea-85ef-0f3ed2c7cc48.png)  
 
-Afin d'adapter le programme précedent pour que l'utilisateur puisse rentrer les valeurs dans un tableau, nous commençons par demander à l'utilisateur le nombre de valeurs qu'il a à traiter et nous stockons ce nombre dans une variable. Ensuite, à l'aide d'une boucle while nous remplissons le tableau. Afin de remplir la ième case du tableau nous utilisons : `tableau[$(($i))]`.  
+Afin d'adapter le programme précedent pour que l'utilisateur puisse rentrer les valeurs dans un tableau, nous commençons par demander à l'utilisateur le nombre de valeurs qu'il a à traiter et nous stockons ce nombre dans une variable. Ensuite, à l'aide d'une boucle while tant que cette taille n'est pas atteinte, nous remplissons le tableau. Afin de remplir la ième case du tableau nous utilisons : `tableau[$(($i))]`.  
 Pour parcourir les valeurs contenues dans le tableau avec une boucle while nous utilisons : `for param in ${tableau[*]}`.  
 Le reste du programme reste inchangé.
 
