@@ -118,7 +118,9 @@ Si la chaîne est vide : il n'y a pas d'utilisateur de ce nom. Sinon, cet utilis
 
 ![alt tag](https://user-images.githubusercontent.com/60732108/74060003-59bd3080-49e9-11ea-80b8-15621beba262.png)  
 
-
+L'indice *i* prend des valeurs de 1 à la valeur rentrée par l'utilisateur (*$1*). On actualise la valeur de *val* en multipliant chaque *i* avec la valeur de *val* précédente. On retourne la valeur de *val* qui est le résultat du factoriel.  
+  
+  
 **Exercice 6. Le juste prix**  
 
 **Écrivez un script qui génère un nombre aléatoire entre 1 et 1000 et demande à l’utilisateur de le deviner. Le programme écrira ”C’est plus!”, ”C’est moins!” ou ”Gagné!” selon les cas (vous utiliserez $RANDOM).**  
