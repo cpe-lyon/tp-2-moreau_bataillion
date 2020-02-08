@@ -102,6 +102,7 @@ cut -d: -f1 /etc/passwd | grep -x lib
 *-d:* : indique le symbole qui délimite les colonnes (ici :)  
 *-f1* : indique la colonne que l'on sélectionne dans le fichier  
 */etc/passwd* : fichier où sont stockés entre autre les identifiants des différents utilisateurs de la machine.  
+Grâce à cette première partie de la commande, on obtient la liste des identifiants de utilisateurs de la machine.  
 *|* : passe la sélection à la commande suivant le pipe  
 *grep* : trouve les occurences du terme passé en paramètre (ici lib).  
 *-x* : fais en sorte que les occurences correspondent exactement au terme passé en paramètre.  
