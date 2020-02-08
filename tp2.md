@@ -63,7 +63,7 @@ Ajoutez le chemin vers script à votre PATH de manière permanente :
 
 ![alt tag](https://user-images.githubusercontent.com/60732108/74060385-229b4f00-49ea-11ea-83ea-d91e4ceac393.png)
 
-Dans PASSWORD, on stocke le mot de passe témoin. On demande à l'utilisateur de remplir un mot de passe grâce à la commande *read*. On ajoute en option de read *-p* pour afficher un message (ici: *Saisissez votre mot de passe :*) et *-s* pour que le mot de passe saisi par l'utilisateur ne s'affiche pas.  
+Dans *PASSWORD*, on stocke le mot de passe témoin. On demande à l'utilisateur de remplir un mot de passe grâce à la commande *read*. On ajoute en option de read *-p* pour afficher un message (ici: *Saisissez votre mot de passe :*) et *-s* pour que le mot de passe saisi par l'utilisateur ne s'affiche pas.  
 Dans le cas où la chaine rentrée par l'utilisateur correspond à la chaine rentrée dans PASSWORD : le mot de passe corespond. On utilise *$* devant les variables pour avoir accès à leur contenu.  
 
 On compile avec *chmod u+x testpwd.sh*  
@@ -74,11 +74,16 @@ On lance le script en appelant *testpwd.sh*
 
 **Ecrivez un script qui prend un paramètre et utilise la fonction suivante pour vérifier que ce paramètre est un nombre réel :**  
 
+**Script :**  
+
 ![alt tag](https://user-images.githubusercontent.com/60732108/74059985-532eb900-49e9-11ea-9558-1781ac8d5e39.png)
 
 
-On crée la fonction et on l'appelle avec en paramètre le premier paramètre saisi par l'utilisateur ($1).  
-$? : contient la dernière valeur retournée par une fonction  
+On crée la fonction et on l'appelle avec en paramètre le premier paramètre saisi par l'utilisateur (*$1*).  
+*$?* : contient la dernière valeur retournée par une fonction  
+On compare *$?* avec 1. Si ils sont égaux, on est dans le cas où l'argument rentré par l'utilisateur n'est pas réel et on affiche un message d'erreur. Sinon, il est réel.  
+Note: il faut fermer les *if* avec des *fi*
+
 
 ## Exercice 4. Contrôle d’utilisateur  
 
