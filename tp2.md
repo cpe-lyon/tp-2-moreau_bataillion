@@ -54,12 +54,15 @@ Une variable vide existe mais ne contient rien. La commande *unset* détruit la 
 ### Programmation Bash  
 
 Ajoutez le chemin vers script à votre PATH de manière permanente :  
-à la fin du fichier ~/.bashrc, ajouter: PATH=$PATH:~/script  
+à la fin du fichier ~/.bashrc, ajouter:  
+PATH=$PATH:~/script  
   
   
 ## Exercice 2. Contrôle de mot de passe  
 
 **Écrivez un script testpwd.sh qui demande de saisir un mot de passe et vérifie s’il correspond ou non au contenu d’une variable PASSWORD dont le contenu est codé en dur dans le script. Le mot de passe saisi par l’utilisateur ne doit pas s’afficher.**  
+
+**Script:**  
 
 ![alt tag](https://user-images.githubusercontent.com/60732108/74060385-229b4f00-49ea-11ea-83ea-d91e4ceac393.png)
 
