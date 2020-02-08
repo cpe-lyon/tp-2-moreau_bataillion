@@ -54,7 +54,7 @@ Une variable vide existe mais ne contient rien. La commande *unset* détruit la 
 ### Programmation Bash  
 
 Ajoutez le chemin vers script à votre PATH de manière permanente :  
-à la fin du fichier ~/.bashrc, ajouter: *PATH=$PATH:~/script*  
+à la fin du fichier *~/.bashrc*, ajouter: *PATH=$PATH:~/script*  
   
   
 ## Exercice 2. Contrôle de mot de passe  
