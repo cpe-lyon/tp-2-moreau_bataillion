@@ -99,7 +99,7 @@ On compare le nombre d'arguments entrés par l'utilisateur (*$#*) avec 0 : si l'
 
 cut -d: -f1 /etc/passwd | grep -x lib  
 *cut* : commande qui récupère des zones spécifiques d'un fichier  
-*-d:* : indique le symbole qui délimite les colonnes (ici :) 
+*-d:* : indique le symbole qui délimite les colonnes (ici :)  
 *-f1* : indique la colonne que l'on sélectionne dans le fichier  
 */etc/passwd* : fichier où sont stockés entre autre les identifiants des différents utilisateurs de la machine.  
 *|* : passe la sélection à la commande suivant le pipe  
