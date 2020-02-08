@@ -149,7 +149,7 @@ Si tous les paramètres sont des nombres réels, on réalise une seconde boucle 
 
 Note:  
 Une boucle `for` doit commencer par `do` et se terminer par `done`  
-Pour faire un calcul : `$(($variable_1 signe_calcul $variable_2))`
+Pour faire un calcul : `$(($variable_1 signe_calcul $variable_2))`  
 `$num1 -eq $num2` : Teste si les deux nombres sont égaux  
 `$num1 -ne $num2` : Teste si les deux nombres sont différents  
 `$num1 -lt $num2` : Teste si num1 < num2  
