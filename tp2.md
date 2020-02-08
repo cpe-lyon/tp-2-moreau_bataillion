@@ -116,6 +116,8 @@ Si la chaîne est vide : il n'y a pas d'utilisateur de ce nom. Sinon, cet utilis
 
 **Écrivez un programme qui calcule la factorielle d’un entier naturel passé en paramètre (on supposera que l’utilisateur saisit toujours un entier naturel).**  
 
+**Script:**  
+
 ![alt tag](https://user-images.githubusercontent.com/60732108/74060003-59bd3080-49e9-11ea-80b8-15621beba262.png)  
 
 L'indice *i* prend des valeurs de 1 à la valeur rentrée par l'utilisateur (*$1*). On actualise la valeur de *val* en multipliant chaque *i* avec la valeur de *val* précédente. On retourne la valeur de *val* qui est le résultat du factoriel.  
@@ -125,6 +127,8 @@ L'indice *i* prend des valeurs de 1 à la valeur rentrée par l'utilisateur (*$1
 
 **Écrivez un script qui génère un nombre aléatoire entre 1 et 1000 et demande à l’utilisateur de le deviner. Le programme écrira ”C’est plus!”, ”C’est moins!” ou ”Gagné!” selon les cas (vous utiliserez $RANDOM).**  
 
+**Script:**  
+
 ![alt tag](https://user-images.githubusercontent.com/60732108/74060235-d6500f00-49e9-11ea-8c95-87bbb3f60610.png)
 
 On génère un nombre random grâce à *$RANDOM*, et on en indique les valeurs min et max avec le *%*. On demande à l'utilisateur un nombre et, tant que ce nombre est différent du nombre random, on lui demande un nouveau nombre en lui donnant des indications.  
@@ -133,13 +137,18 @@ On génère un nombre random grâce à *$RANDOM*, et on en indique les valeurs m
 
 ## Exercice 7. Statistiques  
 
-**1.Écrivez un script qui prend en paramètres trois entiers (entre -100 et +100) et aﬀiche le min, le maxet la moyenne. Vous pouvez réutiliser la fonction de l’exercice 3 pour vous assurer que les paramètressont bien des entiers.
-2.Généralisez le programme à un nombre quelconque de paramètres (pensez àSHIFT)**  
+**1.Écrivez un script qui prend en paramètres trois entiers (entre -100 et +100) et aﬀiche le min, le max et la moyenne. Vous pouvez réutiliser la fonction de l’exercice 3 pour vous assurer que les paramètres sont bien des entiers.
+2.Généralisez le programme à un nombre quelconque de paramètres (pensez à SHIFT)**  
+
+**Script:**  
 
 ![alt tag](https://user-images.githubusercontent.com/60732108/74060241-d819d280-49e9-11ea-86f9-c0af5b0edda5.png)  
 
 
-**3.Modifiez votre programme pour que les notes ne soient plus données en paramètres, mais saisies etstockées au fur et à mesure dans un tableau.**  
+
+**3.Modifiez votre programme pour que les notes ne soient plus données en paramètres, mais saisies et stockées au fur et à mesure dans un tableau.**  
+
+**Script:**  
 
 ![alt tag](https://user-images.githubusercontent.com/60732108/74060382-2202b880-49ea-11ea-85ef-0f3ed2c7cc48.png)  
 
