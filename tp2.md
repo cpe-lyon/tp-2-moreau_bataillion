@@ -149,7 +149,13 @@ Si tous les paramètres sont des nombres réels, on réalise une seconde boucle 
 
 Note:  
 Une boucle `for` doit commencer par `do` et se terminer par `done`  
-Pour faire un calcul : `$((variable_1 signe_calcul variable_2))`
+Pour faire un calcul : `$(($variable_1 signe_calcul $variable_2))`
+`$num1 -eq $num2` : Teste si les deux nombres sont égaux  
+`$num1 -ne $num2` : Teste si les deux nombres sont différents  
+`$num1 -lt $num2` : Teste si num1 < num2  
+`$num1 -le $num2` : Teste si num1 ≤ num2  
+`$num1 -gt $num2` : Teste si num1 > num2  
+`$num1 -ge $num2` : Teste si num1 ≥ num2  
 
 **3.Modifiez votre programme pour que les notes ne soient plus données en paramètres, mais saisies et stockées au fur et à mesure dans un tableau.**  
 
@@ -159,7 +165,7 @@ Pour faire un calcul : `$((variable_1 signe_calcul variable_2))`
 
 Afin d'adapter le programme précedent pour que l'utilisateur puisse rentrer les valeurs dans un tableau, nous commençons par demander à l'utilisateur le nombre de valeurs qu'il a à traiter et nous stockons ce nombre dans une variable. Ensuite, à l'aide d'une boucle while nous remplissons le tableau. Afin de remplir la ième case du tableau nous utilisons : `tableau[$(($i))]`.  
 Pour parcourir les valeurs contenues dans le tableau avec une boucle while nous utilisons : `for param in ${tableau[*]}`.  
-Les reste du programme reste inchangé.
+Le reste du programme reste inchangé.
 
 
 Notes: Copier VM->session
