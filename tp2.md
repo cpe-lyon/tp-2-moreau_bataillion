@@ -121,12 +121,15 @@ Si la chaîne est vide : il n'y a pas d'utilisateur de ce nom. Sinon, cet utilis
 L'indice *i* prend des valeurs de 1 à la valeur rentrée par l'utilisateur (*$1*). On actualise la valeur de *val* en multipliant chaque *i* avec la valeur de *val* précédente. On retourne la valeur de *val* qui est le résultat du factoriel.  
   
   
-**Exercice 6. Le juste prix**  
+## Exercice 6. Le juste prix**  
 
 **Écrivez un script qui génère un nombre aléatoire entre 1 et 1000 et demande à l’utilisateur de le deviner. Le programme écrira ”C’est plus!”, ”C’est moins!” ou ”Gagné!” selon les cas (vous utiliserez $RANDOM).**  
 
 ![alt tag](https://user-images.githubusercontent.com/60732108/74060235-d6500f00-49e9-11ea-8c95-87bbb3f60610.png)
 
+On génère un nombre random grâce à *$RANDOM*, et on en indique les valeurs min et max avec le *%*. On demande à l'utilisateur un nombre et, tant que ce nombre est différent du nombre random, on lui demande un nouveau nombre en lui donnant des indications.  
+*$num_utilisateur -lt $num_random* : teste si num_utlisateur < num_random. Si oui : Le nombre à trouver est plus grand.    
+  
 
 ## Exercice 7. Statistiques  
 
