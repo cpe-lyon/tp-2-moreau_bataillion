@@ -39,7 +39,7 @@ On transforme MY_VAR en variable d'environnement grâce à `export MY_VAR`. Lors
 
 **8.Ecrivez une commande qui affiche ”Bonjour à vous deux, binôme1 binôme2!” (où binôme1 et binôme2 sont vos deux noms) en utilisant la variable NOMS.**  
 
-`export NOMS="Bataillion Moreau"`
+`export NOMS="Bataillion Moreau"`  
 `echo Bonjour à vous deux, $NOMS`
 
 **9.Quelle différence y a-t-il entre donner une valeur vide à une variable et l’utilisation de la commande unset?**  
