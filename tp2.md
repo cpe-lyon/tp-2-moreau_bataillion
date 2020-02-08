@@ -95,15 +95,20 @@ Note: il faut fermer les *if* avec des *fi*
 
 ![alt tag](https://user-images.githubusercontent.com/60732108/74059759-eadfd780-49e8-11ea-80f0-3097916e6f33.png)    
 
+On compare le nombre d'arguments entrés par l'utilisateur (*$#*) avec 0 : si l'utilisateur n'a pas entré de paramètre (*$#=0*), on lui indique sous quel forme il doit rentrer sa commande (*Utilisation :nom_du_script nom_utilisateur*). On utilise *$0* pour avoir accès au nom du script.  
 
 cut -d: -f1 /etc/passwd | grep -x lib  
-*-d:* : indique le symbole qui délimite les colonnes (ici :)  
-*-f1* : indique la colonne que l'on sélectionne  
+*cut* : commande qui récupère des zones spécifiques d'un fichier  
+*-d:* : indique le symbole qui délimite les colonnes (ici :) 
+*-f1* : indique la colonne que l'on sélectionne dans le fichier  
+*/etc/passwd* : fichier où sont stockés entre autre les identifiants des différents utilisateurs de la machine.  
 *|* : passe la sélection à la commande suivant le pipe  
 *grep* : trouve les occurences du terme passé en paramètre (ici lib).  
 *-x* : fais en sorte que les occurences correspondent exactement au terme passé en paramètre.  
+On trouve trouve le nom d'utilisateur dans la liste des utilisateurs. Si il n'y en pas de ce nom, on obtient une chaine vide, sinon, on obtient le nom de l'utilisateur.  
 
 *-z* : vérifie que la chaine est vide  
+Si la chaîne est vide : il n'y a pas d'utilisateur de ce nom. Sinon, cet utilisateur existe.
 
 
 ## Exercice 5. Factorielle  
