@@ -137,7 +137,7 @@ On génère un nombre random grâce à `$RANDOM`, et on en indique les valeurs m
 
 ## Exercice 7. Statistiques  
 
-**1.Écrivez un script qui prend en paramètres trois entiers (entre -100 et +100) et aﬀiche le min, le max et la moyenne. Vous pouvez réutiliser la fonction de l’exercice 3 pour vous assurer que les paramètres sont bien des entiers.
+**1.Écrivez un script qui prend en paramètres trois entiers (entre -100 et +100) et affiche le min, le max et la moyenne. Vous pouvez réutiliser la fonction de l’exercice 3 pour vous assurer que les paramètres sont bien des entiers.
 2.Généralisez le programme à un nombre quelconque de paramètres (pensez à SHIFT)**  
 
 **Script:**  
@@ -153,9 +153,9 @@ Pour faire un calcul : `$(($variable_1 signe_calcul $variable_2))`
 `$num1 -eq $num2` : Teste si les deux nombres sont égaux  
 `$num1 -ne $num2` : Teste si les deux nombres sont différents  
 `$num1 -lt $num2` : Teste si num1 < num2  
-`$num1 -le $num2` : Teste si num1 ≤ num2  
+`$num1 -le $num2` : Teste si num1 &le; num2  
 `$num1 -gt $num2` : Teste si num1 > num2  
-`$num1 -ge $num2` : Teste si num1 ≥ num2  
+`$num1 -ge $num2` : Teste si num1 &ge; num2  
 
 **3.Modifiez votre programme pour que les notes ne soient plus données en paramètres, mais saisies et stockées au fur et à mesure dans un tableau.**  
 
